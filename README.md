@@ -702,3 +702,34 @@ MIT License - see [LICENSE](LICENSE) for details.
 *Augment yourself.*
 
 </div>
+
+---
+
+## Development with Pi + Git-AI
+
+This repo supports **Pi** (multi-model AI agent) with automatic **git-ai** tracking:
+
+```bash
+# Fast development with Pi (YOLO mode, 372+ models)
+pi -p "Implement new skill system feature"
+
+# View AI authorship
+git blame src/skills/MySkill.ts
+git-ai stats
+git-ai diff HEAD~1
+```
+
+**Why this combination**:
+- **Pi**: Multi-model agent with fast file operations (YOLO mode)
+- **git-ai**: Rust-based Git extension tracking which AI wrote each line
+- **PAI**: Skills/Hooks/Memory system benefits from diverse AI models
+
+**Quick Start**:
+```bash
+cd ~/Projects/Personal_AI_Infrastructure
+bun install
+just pi "Add new hook for model context injection"
+git blame src/hooks/ModelContextHook.ts
+```
+
+Read `.claude/pi-dev.md` for detailed development workflow.
